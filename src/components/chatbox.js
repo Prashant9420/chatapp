@@ -11,11 +11,12 @@ function Chatbox(){
   const navigate=useNavigate();
   const [sp,ssp]=useSearchParams();
   const [data,setData]=useState([]);
+  // const [roomCode,setRoomCode]=useState("");
   const [newMessage,setNewMessage]=useState("");
   const [dataCount,setDataCount]=useState(0)
   const getData=()=>{
     const dbref=ref(db,sp.get('room'));
-
+    ssp({"uname":sp.get('uname'),"room":sp.get('room')});
      onValue(dbref,(snapshot)=>{
       let records=[]
       snapshot.forEach(childSnapshot=>{
