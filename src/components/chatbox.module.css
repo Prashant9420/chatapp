@@ -1,0 +1,65 @@
+.chatpage{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.chatbox{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: space-between;
+    height: 750px;
+    border: 10px solid black;
+    border-radius: 50px;
+    background-color:grey;
+    padding: 50px 10px;
+
+}
+.mess{
+    padding: 10px 20px;
+    border-radius:20px ;
+    width: 100%;
+    overflow-wrap:break-word;
+    background-color: rgb(70, 80, 90);
+    font-size: 20px;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+    height:90%;
+    padding: 0px 5px;
+    
+}
+.messages::-webkit-scrollbar{display: none;}
+.messenger{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    justify-content: space-around;
+    border-radius: 15px;
+    padding: 10px 0px;
+}
+.sendButton{
+    width: 12%;
+    border-radius: 40px; 
+    display: flex;
+    background-color: rgb(0, 179, 104);
+    justify-content: center;
+    align-items: center;
+    
+}
+.sendButton>img{
+    width: 50%;
+}
+.messageBox{
+    width: 70%;
+    border-radius: 30px;
+    padding: 0px 20px;
+    font-weight: bold;
+    background-color: rgb(84, 89, 78);
+    font-size: larger;
+    color: white;
+}
