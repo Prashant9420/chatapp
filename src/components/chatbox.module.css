@@ -24,7 +24,7 @@
     height: 770px;
     border: 10px solid black;
     border-radius: 50px;
-    background-color:rgb(33, 64, 111);
+    background-color:rgb(140, 164, 200);
     padding: 50px 10px;
 
 }
@@ -66,13 +66,14 @@
     width: 50%;
 }
 .messageBox{
-    width: 70%;
+    width: 73%;
     border-radius: 30px;
     padding: 0px 20px;
     font-weight: bold;
+    height: 53px;
     background-color: rgb(221, 232, 208);
     font-size: larger;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .dop{
     font-family: "Varela",sans-serif;
@@ -85,7 +86,5 @@
     border-radius: 7px;
     border: 1px solid #2d7bc5;
     text-transform: uppercase;
-    /* margin-top: 760px;
-    margin-right: 745px;
-    margin-left: -900px; */
+
   }

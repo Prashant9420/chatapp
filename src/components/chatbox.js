@@ -29,15 +29,15 @@ function Chatbox(){
       
     })
   }
-  // const gotoApp=()=>{
-  //   window.location.href = "http://youtube.com/watch?v=KQW7SqWu_no";
-  // }
   const sendMessage=async()=>{
     if(!newMessage)return;
+    let m=newMessage;
+    setNewMessage("");
     await set(ref(db,sp.get('room')+"/"+dataCount),{
       uname:sp.get('uname'),  
-      message:newMessage
+      message:m
     })
+    
 
   }
 
@@ -54,12 +54,12 @@ function Chatbox(){
     </div>
         {
           data.map((mess)=>
-            <h3 className={style.mess}><span style={{color:'greenyellow'}}>{mess[1]+": "}</span><span style={{color:'white'}}>{mess[2]}</span></h3>
+            <h3 className={style.mess}><span style={{color:'brown'}}>{mess[1]+": "}</span><span style={{color:'black'}}>{mess[2]}</span></h3>
           )
         }
     </div>
         <div className={style.messenger}>
-          <input type="text" placeholder='Message...' className={style.messageBox} onChange={(e)=>setNewMessage(e.target.value)}/>
+          <input type="text" placeholder='Message...' className={style.messageBox} value={newMessage} onChange={(e)=>setNewMessage(e.target.value)}/>
           <div className={style.sendButton} onClick={()=>sendMessage()}>
             <img src={sendIcon} alt="sendIcon"/>
           </div>

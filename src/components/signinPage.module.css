@@ -18,7 +18,8 @@ body{
     align-items:center;
     margin-left: 40%;
     margin-top:5%;
-    background-color: rgb(38, 47, 47);
+    opacity: 71%;
+    background-color: rgb(39, 39, 39);
     border-radius: 20px;
     justify-content: space-around;
   }
