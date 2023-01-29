@@ -1,19 +1,30 @@
 .chatpage{
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     align-items: center;
-
+    flex-direction: column;
+    background-color:rgb(156, 217, 212);
+        background: url(image1.jpg) center no-repeat;
+        background-blend-mode:hard-light;
+        position:relative;
+        background-size: cover;
+        opacity: inherit;
+           
+}
+.signout{
+    display: flex;
+    align-items: center;
 }
 .chatbox{
     display: flex;
     flex-direction: column;
     width: 25%;
     justify-content: space-between;
-    height: 750px;
+    height: 770px;
     border: 10px solid black;
     border-radius: 50px;
-    background-color:grey;
+    background-color:rgb(33, 64, 111);
     padding: 50px 10px;
 
 }
@@ -22,7 +33,7 @@
     border-radius:20px ;
     width: 100%;
     overflow-wrap:break-word;
-    background-color: rgb(70, 80, 90);
+    background-color: rgb(204, 204, 204);
     font-size: 20px;
 }
 .messages{
@@ -59,7 +70,22 @@
     border-radius: 30px;
     padding: 0px 20px;
     font-weight: bold;
-    background-color: rgb(84, 89, 78);
+    background-color: rgb(221, 232, 208);
     font-size: larger;
     color: white;
 }
+.dop{
+    font-family: "Varela",sans-serif;
+    background-color: #2d7bc5;
+    padding:0px 15px;
+    color: white;
+    height:42px;
+    width: 165px;
+    line-height: 36px;
+    border-radius: 7px;
+    border: 1px solid #2d7bc5;
+    text-transform: uppercase;
+    /* margin-top: 760px;
+    margin-right: 745px;
+    margin-left: -900px; */
+  }

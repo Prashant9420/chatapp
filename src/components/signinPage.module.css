@@ -1,16 +1,28 @@
+body{
+  background-color:rgb(72, 72, 72);
+  height: 90vh;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+      background: url(img.jpg) center no-repeat;
+      background-blend-mode:hard-light;
+      position:relative;
+      background-size: cover;
+      opacity: inherit;
+}
 .signin{
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 200px;
-    /* border: 2px solid red; */
-    align-items: center;
+    width: 19%;
+    height: 240px;
+    align-items:center;
     margin-left: 40%;
-    margin-top:15%;
-    background-color: aqua;
+    margin-top:5%;
+    background-color: rgb(38, 47, 47);
     border-radius: 20px;
     justify-content: space-around;
   }
+
 .signin>input{
     height: 30px;
     width: 75%;
@@ -20,7 +32,7 @@
   }
   .signinButton{
     height: 30px;
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
     background-color:greenyellow;
   }
@@ -28,3 +40,4 @@
     /* border: 2px solid red; */
     width: 50%;
   }
+  

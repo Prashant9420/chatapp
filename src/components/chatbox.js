@@ -11,12 +11,10 @@ function Chatbox(){
   const navigate=useNavigate();
   const [sp,ssp]=useSearchParams();
   const [data,setData]=useState([]);
-  // const [roomCode,setRoomCode]=useState("");
   const [newMessage,setNewMessage]=useState("");
   const [dataCount,setDataCount]=useState(0)
   const getData=()=>{
     const dbref=ref(db,sp.get('room'));
-    ssp({"uname":sp.get('uname'),"room":sp.get('room')});
      onValue(dbref,(snapshot)=>{
       let records=[]
       snapshot.forEach(childSnapshot=>{
@@ -31,6 +29,9 @@ function Chatbox(){
       
     })
   }
+  // const gotoApp=()=>{
+  //   window.location.href = "http://youtube.com/watch?v=KQW7SqWu_no";
+  // }
   const sendMessage=async()=>{
     if(!newMessage)return;
     await set(ref(db,sp.get('room')+"/"+dataCount),{
@@ -49,6 +50,8 @@ function Chatbox(){
     <div className={style.chatpage}>
     <div className={style.chatbox}>
     <div className={style.messages}>
+    <div id="top" class={style.wall}>
+    </div>
         {
           data.map((mess)=>
             <h3 className={style.mess}><span style={{color:'greenyellow'}}>{mess[1]+": "}</span><span style={{color:'white'}}>{mess[2]}</span></h3>
@@ -63,7 +66,12 @@ function Chatbox(){
 
         </div>
     </div>
-    <Button onClick={()=>navigate('/')}>Sign Out</Button>
+    <div class="download">
+      <a href='https://raw.githubusercontent.com/Ashwani2529/chatting_App/main/app-release.apk
+' target="_blank"><button className={style.dop}>Download App</button></a>
+    </div>  
+    <Button class="signout" onClick={()=>navigate('/')}>Sign Out</Button>
+    
     </div>
   )
 }
