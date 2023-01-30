@@ -1,23 +1,22 @@
 body{
+  display: flex;
   background-color:rgb(72, 72, 72);
-  height: 90vh;
-  justify-content:space-around;
+  justify-content:center;
   align-items: center;
-  flex-direction: column;
-      background: url(img.jpg) center no-repeat;
-      background-blend-mode:hard-light;
-      position:relative;
-      background-size: cover;
-      opacity: inherit;
+  height: 100vh;
+  background: url(img.jpg) center no-repeat;
+  background-blend-mode:hard-light;
+  position:relative;
+  background-size: cover;
 }
 .signin{
     display: flex;
     flex-direction: column;
-    width: 19%;
+    width: 50vw;
     height: 240px;
     align-items:center;
-    margin-left: 40%;
-    margin-top:5%;
+    /* margin-left: 40%;
+    margin-top:5%; */
     opacity: 71%;
     background-color: rgb(39, 39, 39);
     border-radius: 20px;
@@ -40,5 +39,10 @@ body{
   .signinLink{
     /* border: 2px solid red; */
     width: 50%;
-  }
+}
+@media screen and (max-width: 480px) {
+    .signin{
+      width: 90vw;
+    }
   
+}

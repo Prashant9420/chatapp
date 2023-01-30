@@ -13,6 +13,7 @@ function SigninPage(){
       <div className={Style.signin}>
         <input type="text" placeholder='Enter name' onChange={(e)=>setName(e.target.value)}/>
         <input type="text" placeholder='Room Code' onChange={(e)=>setRoomCode(e.target.value)}/>
+        
         <button onClick={enterChat} className={Style.signinButton}>Enter Chat</button>
       </div>
     )
